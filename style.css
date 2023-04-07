@@ -31,11 +31,12 @@ a {
     padding: 3rem;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: 1frpx auto;
-    transition: 300ms;
+img {
+    height: 80%;
+    width: 80%;
 }
+
+
 
 /* :root{
     --background-color: #C7D6D5;
