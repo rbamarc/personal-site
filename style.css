@@ -63,10 +63,10 @@ a {
 }
 
 .footer-container a {
-    display: inline-block;
+    /* display: inline-block;
     color: var(--footer-text-color);
     margin: 0 1rem;
-    border: 1px dotted black;
+    border: 1px dotted black; */
 
 }
 
