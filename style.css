@@ -20,6 +20,16 @@ body {
     color: var(--nav-text-color); 
     justify-content: space-around; 
     border-radius: 2rem ;
+    align-items: center;
+    height: 60px;
+}
+
+.profile-image {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
 }
 
 a {
@@ -46,9 +56,37 @@ a {
     display: flex;
     background-color: var(--header-color);
     justify-content: space-around;
+    align-items: center;
+    height: 5rem;
+    border-radius: 2rem;
+    text-align: center;
 }
 
-.footer-container > .footer-link {
+.footer-container a {
+    display: inline-block;
     color: var(--footer-text-color);
-    justify-content: space-around;
+    margin: 0 1rem;
+    border: 1px dotted black;
+
 }
+
+p {
+    text-align: center;
+}
+
+.about-img {
+    display: flex;
+    height: 40%;
+    width: 40%;
+    justify-content: center;
+    border-radius: 1rem;
+    margin-bottom: 5rem;
+
+}
+
+.body-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+

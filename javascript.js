@@ -1,2 +1,2 @@
 console.log("hello world");
-alert ('hello!')
+alert (`I know, I'm kinda weird`)
