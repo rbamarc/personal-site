@@ -1,37 +1,245 @@
 :root{
-    --background-color: #C7D6D5;
-    --header-color: #0C120C;
-    --header-text-color: #C20114;
-    --main-text-color: #0C120C;
-    --nav-header-color: #6D7275;
-    --nav-text-color: #ECEBF3;
+    --background-color: black;
+    --card-color: rgb(46, 46, 46);
+    --accent-color: mediumslateblue;
+    --main-text-color: white;
+    
 }
 
 body {
-    margin: 0;
+    /* display: grid;
+    grid-template-rows: 80px, 2fr, 60px; */
+    min-height: 100vh;
+    margin: 2px;
+    background-color: var(--background-color);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.grid {
-    height: 100vh;
+
+
+
+.card-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.card-spot{
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.card {
+    width: 640px;
+    position: relative;
+    background-color: var(--card-color);
+    border: 1px solid rgb(255, 255, 255 /5%);
+    border-radius: 1.5rem;
+    /* padding: 1rem; */
+
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-image: radial-gradient(rgba(255, 255, 255, 10%) 1px transparent 1px);
+    background-position: 50% 50%;
+    background-size: 1.1rem 1.1rem;
+    overflow: hidden;
+}
+
+.card-content > h1{
+    color: var(--main-text-color);
+    font-size: 2.6rem;
+    margin: 1rem;
+}
+
+.card-content > h3{
+    color: var(--accent-color);
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    margin-top: 2rem;
+
+}
+
+.card-content > p {
+    color: var(--main-text-color);
+    text-transform: uppercase;
+    margin: 2rem;
+
+}
+
+.card::after{
+    background: linear-gradient(transparent, mediumslateblue, transparent);
+    height: 70px;
+    width: 2px;
+    position: absolute;
+    left: -1;
+    top: 60%;
+    content: "";
+    opacity: 0;
+}
+
+.card:hover::after{
+    top: 25%;
+    opacity: 1;
+    transition: top 600ms ease, opacity 600ms ease;
+}
+
+.container  {
+    display: flex;
+    background-color: var(--card-color);
+    align-items: center;
+    height: 80px;
+    padding: 0 20px;
+}
+
+.profile-pic {
+    
+    padding: 5px;
+    justify-content: space-around;
+
 }
 
 .nav-bar {
-    background: var(--header-color);
+    flex-grow: 2;
+    display: flex;
+    justify-content: flex-end;
+    
+
 }
 
-.right {
-    background: var(--background-color);
+.profile-pic img {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
     
+    
+}
+
+nav li {
+    margin: 10px;
+    background-color: var(--card-color);
+    transition: 300ms;
+}
+
+nav li:hover {
+    margin: 10px;
+    background-color: var(--card-color);
+    border-left: 3px solid var(--accent-color);
 }
 
 a {
     text-decoration: none;
-    color: var(--nav-text-color);
-    font-size: 30px;
-    padding: 3rem;
+    color: var(--main-text-color);
+    
 }
 
-img {
-    height: 80%;
-    width: 80%;
+footer{
+    position: fixed;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    align-items: flex-end;
+    background-color: var(--card-color);
+}
+
+footer a:hover{
+    border: 2px solid var(--accent-color);
+    
+}
+
+.form-box{
+    display: flex;
+    
+    justify-content: center;
+    margin: 5rem;
+}
+
+.form-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--card-color);
+    padding: 20px;
+    border-radius: 2rem;
+    width: 30%;
+
+}
+
+input[type=submit]{
+    background-color: var(--accent-color);
+    color: var(--main-text-color);
+    margin-top: 1rem;
+    text-decoration: none;
+    transition: 200ms;
+}
+
+input[type=submit]:hover{
+    background-color: var(--main-text-color);
+    color: var(--accent-color);
+}
+
+
+.name{
+    color: var(--main-text-color);
+    margin-top: 1rem;
+
+}
+
+.email{
+    color: var(--main-text-color);
+    margin-top: 1rem;
+    
+}
+
+.form-name{
+    margin: 1rem;
+}
+
+.form-email{
+    margin: 1rem;
+}
+
+.form-header{
+    color: var(--accent-color);
+    text-align: center;
+}
+
+.body-container{
+    display: grid;
+    grid-template-columns: 20rem, 1fr, 1fr, 1fr, 20rem;
+    grid-template-rows: 5rem, 1fr, 1fr, 5rem;
+    gap: 1rem;
+}
+
+.img-container{
+    border-radius: 2rem;
+    grid-column: 3/ 5;
+    grid-row: 3;
+}
+
+.img-container img{
+    height: 640px;
+    width: 640px;
+    
+}
+
+.about-card{
+    grid-column: 2/4;
+    grid-row: 2;
 }

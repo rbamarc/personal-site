@@ -1,2 +1,5 @@
-console.log("hello world");
-alert ('hello!')
+
+
+function showAlert(){
+    alert('Thank you for your inquiry!');
+}

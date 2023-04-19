@@ -5,16 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="javascript.js"></script>
 </head>
 <body>
-    <div class="grid">
-        <div class="nav-bar">
-            <a  href="index.html"><span>Home</span></a>
-            <a href="about.html"><span>About</span></a>
-            <a href="portfolio.html"><span>Portfolio</span></a>
-            <a href="contact.html">Contact</a>
+    
+    <nav class="container">
+        <div class="profile-pic">
+            <a href="/index.html"><img src="./assets/img/IMG_0036-min.JPG" alt="profile pic"></a>
         </div>
+        <div class="nav-bar">
+            <ul>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/portfolio.html">Portfolio</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="form-box">
+        <form class="form-container">
+            <h3 class="form-header">Get In Contact</h3>
+            <div class="form-name">
+                <label class="name" for="name">Name:</label>
+                <input type="text" id="name" placeholder="Name">
+            </div>
+            <div class="form-email">
+                <label class="email" for="email">Email:</label>
+                <input type="text" id="email" placeholder="Email">
+            </div>
+            <textarea name="text-box" id="text" cols="30" rows="10">Enter message</textarea>
+            <input class="submit-button" type="submit" value="submit" onclick="showAlert()">
+
+        </form>
     </div>
+    <footer>
+        <a class="footer-link" href="https://www.linkedin.com/in/marc-robinson-2873b823b/"><img src="/assets/img/icons8-linkedin-50 (1).png" alt="linkedin-symbol"></a>
+        <a class="footer-link" href="https://github.com/rbamarc"><img src="/assets/img/icons8-github-50.png" alt="github-logo"></a>
+    </footer>
     
 </body>
 </html>
