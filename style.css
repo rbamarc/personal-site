@@ -18,9 +18,15 @@ body {
 
 
 
-.card-flex{
-    display: flex;
-    justify-content: center;
+.card-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.card-spot{
+    grid-column: 2;
+    grid-row: 2;
 }
 
 .card {
@@ -151,6 +157,11 @@ footer{
     background-color: var(--card-color);
 }
 
+footer a:hover{
+    border: 2px solid var(--accent-color);
+    
+}
+
 .form-box{
     display: flex;
     
@@ -159,12 +170,30 @@ footer{
 }
 
 .form-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     background-color: var(--card-color);
     padding: 20px;
     border-radius: 2rem;
     width: 30%;
 
 }
+
+input[type=submit]{
+    background-color: var(--accent-color);
+    color: var(--main-text-color);
+    margin-top: 1rem;
+    text-decoration: none;
+    transition: 200ms;
+}
+
+input[type=submit]:hover{
+    background-color: var(--main-text-color);
+    color: var(--accent-color);
+}
+
 
 .name{
     color: var(--main-text-color);
@@ -189,4 +218,28 @@ footer{
 .form-header{
     color: var(--accent-color);
     text-align: center;
+}
+
+.body-container{
+    display: grid;
+    grid-template-columns: 20rem, 1fr, 1fr, 1fr, 20rem;
+    grid-template-rows: 5rem, 1fr, 1fr, 5rem;
+    gap: 1rem;
+}
+
+.img-container{
+    border-radius: 2rem;
+    grid-column: 3/ 5;
+    grid-row: 3;
+}
+
+.img-container img{
+    height: 640px;
+    width: 640px;
+    
+}
+
+.about-card{
+    grid-column: 2/4;
+    grid-row: 2;
 }
